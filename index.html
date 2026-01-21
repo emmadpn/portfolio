@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Emma DUPIN</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        section { scroll-margin-top: 100px; }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="100">
+
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#home">PORTFOLIO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#graphisme">Graphisme</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#figma">Web & UX</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#audiovisuel">Audiovisuel</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <header id="home" class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h5 class="text-accent mb-3">Bonjour, je suis</h5>
+                    <h1 class="display-3 fw-bold mb-4">Emma DUPIN</h1>
+                    
+                    <div class="lead mb-4 description-box">
+                        <p><strong>Étudiant MMI | Futur expert en Stratégie & UX</strong></p>
+                    
+                        <p class="mt-3">
+                            La polyvalence du BUT MMI m'a permis de toucher à tout : développement, graphisme, audiovisuel. Fort de cette culture numérique transverse, je me spécialise désormais en <strong>Stratégie communication numérique & Design d’expérience</strong>.
+
+                            Je ne vois pas le design et la communication comme deux silos distincts, mais comme un tout. Je souhaite mettre mes compétences au service de projets où l'analyse des besoins utilisateurs (UX) nourrit la pertinence de la stratégie de communication.
+                    </div>
+
+                    <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+                        <a href="cv.html" class="btn btn-outline-dark btn-lg rounded-pill">
+                            <i class="fas fa-eye me-2"></i>Voir mon CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+     <section id="graphisme" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <span class="badge bg-accent mb-2">Design</span>
+                <h2>Projets Graphiques</h2>
+                <div class="line mx-auto"></div>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-12 text-center mb-2">
+                    <h4 class="text-muted">Campagnes d'affichage</h4>
+                    <p>Série de créations print réalisées sur Photoshop & Canva</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="gallery-item" onclick="openLightbox('affiche1.png')">
+                        <img src="affiche1.png" alt="Affiche 1" class="img-fluid rounded shadow-sm">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="gallery-item" onclick="openLightbox('affiche2.png')">
+                        <img src="affiche2.png" alt="Affiche 2" class="img-fluid rounded shadow-sm">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="gallery-item" onclick="openLightbox('affiche3.png')">
+                        <img src="affiche3.png" alt="Affiche 3" class="img-fluid rounded shadow-sm">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="gallery-item" onclick="openLightbox('affiche_japan.png')">
+                        <img src="affiche_japan.png" alt="Affiche 4" class="img-fluid rounded shadow-sm">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center mt-5 pt-4 border-top">
+                
+                <div class="col-12 text-center mb-4">
+                    <h3 class="mb-3">Identité Visuelle</h3>
+                    <p class="text-muted">Création de logo sur Illustrator et élaboration de la charte graphique pour la Compagnie de danse Imprévue</p>
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center d-flex flex-column justify-content-center align-items-center p-4">
+                            <img src="logo.jpg" alt="Mon Logo" class="img-fluid mb-3" style="max-height: 350px; object-fit: contain;">
+                            
+                            <h5 class="card-title mt-3">Le Logotype</h5>
+                            <p class="card-text small text-muted">
+                                Un design épuré conçu pour s'adapter à tous les supports de communication.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-0 overflow-hidden rounded">
+                            <div style="height: 500px; background-color: #525659;">
+                                <iframe src="charte.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=1" width="100%" height="100%" style="border:none;">
+                                    <p class="text-white text-center p-5">
+                                        Votre navigateur ne peut pas afficher ce PDF.<br>
+                                        <a href="charte.pdf" class="btn btn-light btn-sm mt-3">Télécharger la charte</a>
+                                    </p>
+                                </iframe>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0 text-center">
+                            <small class="text-muted"><i class="fas fa-mouse"></i> Scrollez dans la fenêtre pour voir les pages</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+    </section>
+
+    <section id="figma" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <span class="badge bg-accent mb-2">UI/UX Design</span>
+                <h2>Projets Web & UX</h2>
+                <div class="line mx-auto"></div>
+                <p class="mt-3 text-muted">Conception d'interfaces et maquettage interactif</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                
+                <div class="col-lg-6">
+                    <div class="project-card card border-0 shadow overflow-hidden h-100">
+                        <div class="card-img-top-wrapper" style="height: 350px; overflow: hidden; background-color: #f8fafc;">
+                            <img src="projet_vinyle.png" alt="Maquette Vinyle & Vibes" class="w-100 h-100" style="object-fit: cover; object-position: center;">
+                        </div>
+
+                        <div class="card-body p-4 text-center d-flex flex-column">
+                            <h3 class="mb-3">VINYLE & VIBES</h3>
+                            <p class="text-muted mb-4 flex-grow-1">
+                                Conception d'un site vitrine immersif pour les passionnés de musique.<br>
+                                Création de l'identité visuelle, wireframes et prototypage du site.
+                            </p>
+
+                            <div class="d-flex flex-wrap justify-content-center gap-3 mt-auto">
+                                <a href="https://www.figma.com/design/NenW4Ek2LU32VAsLHN2PjC/Untitled?node-id=0-1&t=GFZw4cZQT7IhqiWA-1" target="_blank" class="btn btn-outline-dark rounded-pill px-4 py-2">
+                                    <i class="fab fa-figma me-2"></i>Voir le prototype
+                                </a>
+                                <a href="https://www.figma.com/proto/NenW4Ek2LU32VAsLHN2PjC/Untitled?node-id=2-2&starting-point-node-id=2%3A2&t=GOeb4vKRNoO1qF2w-1" target="_blank" class="btn btn-primary rounded-pill px-4 py-2">
+                                    <i class="fas fa-play me-2"></i>Tester le site
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="project-card card border-0 shadow overflow-hidden h-100">
+                        <div class="card-img-top-wrapper" style="height: 350px; overflow: hidden; background-color: #ffffff; display: flex; justify-content: center; align-items: center;">
+                            <img src="app_mobile.png" alt="Maquette Croc'Green" style="max-height: 100%; width: auto; object-fit: contain; transform: scale(1.25);">
+                        </div>
+
+                        <div class="card-body p-4 text-center d-flex flex-column">
+                            <h3 class="mb-3">CROC'GREEN</h3>
+                            <p class="text-muted mb-4 flex-grow-1">
+                                Conception d'une application mobile pour la commande de repas équilibrés. Focus sur l'ergonomie et l'expérience utilisateur.
+                            </p>
+
+                            <div class="d-flex flex-wrap justify-content-center gap-3 mt-auto">
+                                <a href="https://www.figma.com/design/JkvEzOMTJ5UqsPAtM3NTFW/Untitled?node-id=0-1&t=E0pCmNKTRa6rirvW-1" target="_blank" class="btn btn-outline-dark rounded-pill px-4 py-2">
+                                    <i class="fab fa-figma me-2"></i>Voir le prototype
+                                </a>
+                                <a href="https://www.figma.com/proto/JkvEzOMTJ5UqsPAtM3NTFW/Untitled?node-id=1-2&starting-point-node-id=1%3A2&t=3X9TPH8YHzTRd4K3-1" target="_blank" class="btn btn-primary rounded-pill px-4 py-2">
+                                    <i class="fas fa-play me-2"></i>Tester l'appli
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+   <section id="audiovisuel" class="section-padding bg-dark text-white">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <span class="badge bg-light text-dark mb-2">Vidéo</span>
+                <h2 class="text-white">Projets Audiovisuels</h2>
+                <div class="line bg-white mx-auto"></div>
+                <p class="mt-3 opacity-75">Montage, captation et motion design</p>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-md-6">
+                    <div class="video-wrapper mb-3">
+                        <video controls class="w-100 rounded shadow">
+                            <source src="video1.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la balise vidéo.
+                        </video>
+                    </div>
+                    <h4 class="mt-3 text-white">Vidéo Walk and Talk Opéra de Vichy</h4>
+                    <p class="opacity-75">Création d'une courte vidéo en walk and Talk pour faire découvrir l'opéra de Vichy avec différentes prise de vues. Montage effectué sur Davinci Resolve et introduction réalisé en motion design sur after effect</p>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="video-wrapper mb-3">
+                        <video controls class="w-100 rounded shadow">
+                            <source src="video2.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la balise vidéo.
+                        </video>
+                    </div>
+                    <h4 class="mt-3 text-white">Vidéo dans le cadre d'une SAE</h4>
+                    <p class="opacity-75">Création d'une vidéo de communication institutionnelle enrichie grâce à des données et accessible.<BR>
+                        *SAE = Situation d'Apprentissage et d'évaluation
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-5">N'hésitez pas à me contacter !</h2>
+                    
+                    <div class="d-flex flex-wrap justify-content-center gap-4">
+                        <a href="mailto:Emma.DUPIN@etu.uca.fr" class="contact-pill">
+                            <i class="fas fa-envelope"></i> Emma.DUPIN@etu.uca.fr
+                        </a>
+                        <a href="tel:+33767915356" class="contact-pill">
+                            <i class="fas fa-phone"></i> 07 67 91 53 56
+                        </a>
+                    </div>
+
+                    <div class="social-links mt-5">
+                        <a href="https://www.linkedin.com/in/emma-dupin-8108a8355/" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/emma.dupin.pro/" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 text-center text-muted border-top">
+        <div class="container">
+            <small>&copy; 2026 Emma DUPIN. Tous droits réservés.</small>
+        </div>
+    </footer>
+
+    <div id="lightbox" onclick="closeLightbox()">
+        <span class="close-btn">&times;</span>
+        <img id="lightbox-img" src="">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+    
+    function openLightbox(src) {
+        const lightbox = document.getElementById('lightbox');
+        const img = document.getElementById('lightbox-img');
+        if(lightbox && img) {
+            lightbox.style.display = 'flex';
+            img.src = src;
+        }
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        if(lightbox) {
+            lightbox.style.display = 'none';
+        }
+    }
+
+    
+    const navLinks = document.querySelectorAll('.nav-link');
+    const menuToggle = document.getElementById('navbarNav');
+    
+    navLinks.forEach((l) => {
+        l.addEventListener('click', () => { 
+            
+            if(menuToggle.classList.contains('show')) {
+                
+                const bsCollapse = new bootstrap.Collapse(menuToggle, {
+                    toggle: true 
+                });
+            }
+        })
+    });
+</script>
+</body>
+</html>

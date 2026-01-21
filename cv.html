@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon CV</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body { margin: 0; height: 100vh; display: flex; flex-direction: column; background: #525659; }
+        .top-bar { background: #333; color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; }
+        iframe { flex-grow: 1; width: 100%; border: none; }
+        a { text-decoration: none; color: white; }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="index.html" class="btn btn-outline-light btn-sm"><i class="fas fa-arrow-left me-2"></i>Retour au site</a>
+        <span>CV - Emma DUPIN</span>
+        <a href="cv.pdf" download class="btn btn-light btn-sm"><i class="fas fa-download me-2"></i>Télécharger</a>
+    </div>
+    <iframe src="cv.pdf"></iframe>
+</body>
+</html>

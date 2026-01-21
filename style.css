@@ -1,0 +1,223 @@
+/* --- 1. Paramètres Généraux --- */
+html {
+    scroll-behavior: smooth; /* Défilement fluide */
+}
+
+/* Force les sections à s'arrêter un peu plus bas pour ne pas être cachées par le menu */
+section {
+    scroll-margin-top: 100px; 
+}
+
+/* Variables de couleurs */
+:root {
+    --primary: #0f172a;       /* Bleu Nuit très sombre */
+    --accent: #4f46e5;        /* Indigo vibrant */
+    --accent-light: #e0e7ff;  /* Indigo très clair */
+    --text-dark: #334155;     /* Gris ardoise */
+    --bg-light: #f8fafc;      /* Blanc cassé */
+    --white: #ffffff;
+}
+
+/* Base */
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+a { text-decoration: none; }
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.text-accent { color: var(--accent); }
+.bg-accent { background-color: var(--accent); }
+
+/* --- 2. Navigation (Menu) --- */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    color: var(--primary) !important;
+    letter-spacing: -0.5px;
+}
+
+.nav-link {
+    color: var(--text-dark) !important;
+    font-weight: 500;
+    margin-left: 15px;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--accent) !important;
+}
+
+/* --- 3. Hero Section (Accueil) --- */
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    padding-top: 80px;
+}
+
+.description-box {
+    border-left: 4px solid var(--accent);
+    padding-left: 20px;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    padding: 12px 30px;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #4338ca;
+}
+
+/* --- 4. Section Graphisme --- */
+.line {
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent);
+    margin-top: 15px;
+    border-radius: 2px;
+}
+
+.gallery-item {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Le petit voile bleu au survol */
+.gallery-item .overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(79, 70, 229, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.gallery-item .overlay i {
+    color: white;
+    font-size: 2rem;
+}
+
+/* --- 5. Cartes Projets (Figma) --- */
+.project-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 100%;
+    transition: transform 0.3s;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+/* --- 6. Contact --- */
+.contact-pill {
+    background: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    color: var(--primary);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s;
+    border: 1px solid rgba(0,0,0,0.05);
+    font-weight: 600;
+}
+
+.contact-pill:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background: var(--white);
+    color: var(--primary);
+    border-radius: 50%;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    background: var(--accent);
+    color: white;
+    transform: rotate(10deg);
+}
+
+/* --- 7. LIGHTBOX (ZOOM) - C'EST ICI --- */
+#lightbox {
+    display: none; /* Caché par défaut */
+    position: fixed;
+    z-index: 9999; /* Au dessus de tout */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95); /* Fond noir transparent */
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 2px solid white;
+    border-radius: 4px;
+    object-fit: contain;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.close-btn:hover {
+    color: var(--accent);
+}
